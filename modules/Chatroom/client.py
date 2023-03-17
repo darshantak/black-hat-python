@@ -4,6 +4,7 @@ import argparse
 import os
 
 sha1_hash = "6f5902ac237024bdd0c176cb93063dc4f17f3e8d"
+md5_hash = "d41d8cd98f00b204e9800998ecf8427e"
 class Send(threading.Thread):
 
     def __init__(self, sock, name):
