@@ -1,3 +1,4 @@
 modules/
 tests/
 *.DS_Store
+*.vscode
