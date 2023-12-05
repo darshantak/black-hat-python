@@ -21,13 +21,14 @@ def get_current_ip():
 
 
 def renew_tor_ip():
-    with Controller.from_port(port = 9051) as controller:
+    with Controller.from_port(port = 9050) as controller:
         controller.authenticate()
         controller.signal(Signal.NEWNYM)
 
 
 if __name__ == "__main__":
+    # time.sleep(50000)
     for i in range(5):
         print( get_current_ip())
         renew_tor_ip()
-        time.sleep(5)
+        time.sleep(10)
