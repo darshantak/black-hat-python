@@ -10,3 +10,4 @@ def open_terminal():
 if __name__ == "__main__":
     open_terminal()
 
+AWS = "AKIAQWE234FGBGVDS32"
