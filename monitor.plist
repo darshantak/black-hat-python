@@ -1,0 +1,22 @@
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.username.filemonitor</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/temp.user/thor/file-monitoring-daemon/src/monitor/file_monitor</string>
+    </array>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>/tmp/filemonitor.out</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/filemonitor.err</string>
+</dict>
+</plist>
