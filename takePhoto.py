@@ -13,7 +13,7 @@ def capture_and_save_photo(count):
     # Capture a single frame from the camera
     ret, frame = cap.read()
     if ret:
-        save_path = f"/Users/darshan.mohan/Desktop/leet/go/go-by-example/photo{count}.jpg"
+        save_path = f"/Users/photo{count}.jpg"
         # Save the captured frame as an image file
         cv2.imwrite(save_path, frame)
         print("Photo captured and saved as 'photo.jpg'.")

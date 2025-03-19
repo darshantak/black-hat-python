@@ -1,11 +1,12 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>com.username.filemonitor</string>
+    <string>com.username.photocapture</string>
 
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/temp.user/thor/file-monitoring-daemon/src/monitor/file_monitor</string>
+        <string>/usr/bin/python3</string>
+        <string>/Users/temp.user/thor/file-monitoring-daemon/src/monitor/capture_photos.py</string>
     </array>
 
     <key>RunAtLoad</key>
@@ -15,8 +16,8 @@
     <true/>
 
     <key>StandardOutPath</key>
-    <string>/tmp/filemonitor.out</string>
+    <string>/tmp/photocapture.out</string>
     <key>StandardErrorPath</key>
-    <string>/tmp/filemonitor.err</string>
+    <string>/tmp/photocapture.err</string>
 </dict>
 </plist>
